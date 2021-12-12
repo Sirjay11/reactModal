@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import EmailModal from './EmailModal/EmaiModal';
+import {EMProvider} from './EmailModal/EMProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = () => {
+ return (
+  <EMProvider>
+   
+     <header className="page-header">
+       <div className="logo">
+         Berry
+         <div className="logo__sub">by Jenny</div>
+       </div>
+     </header>
+     <main className="content-area">
+       <h1>Content Area</h1>
+     </main>
+     <EmailModal />
+
+     <div className="email-modal" />
+   
+   </EMProvider>
+ );
 }
 
 export default App;
